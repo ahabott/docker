@@ -3,6 +3,9 @@ stages:
   - test
   - build
 
+variables:
+  DOCKER_IMAGE_NAME: $CI_REGISTRY_IMAGE
+
 install:
   stage: install
   image: node:24-alpine
