@@ -1,11 +1,14 @@
 stages:
-- install
-- test
-- build
+  - install
+  - test
+  - build
+
 install:
-stage: install
-image: node:24-alpine
-before_script:
-- echo "Installing dependencies..."
-script:
-- npm install --omit=dev
+  stage: install
+  image: node:24-alpine
+
+  before_script:
+    - echo "Installing dependencies..."
+
+  script:
+    - npm install --omit=dev
