@@ -12,3 +12,11 @@ install:
 
   script:
     - npm install --omit=dev
+
+test:
+  stage: test
+  image: node:20-alpine
+  needs: ["install"]
+
+  script:
+    - npm test
